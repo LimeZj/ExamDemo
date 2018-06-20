@@ -205,18 +205,8 @@ public class Schedule {
                 }
             }
 
-            if(i + 1 != size) {
-                currentTasks.clear();
-                currentTasks.add(orgTasks.get(i+1));
-                for (int index =0; index < size; index++){
-                    if(index != i+1){
-                        currentTasks.add(orgTasks.get(index));
-                    }
-                }
-            }
-
-            //currentTasks.add(currentTasks.get(0));
-            //currentTasks.remove(0);
+            currentTasks.add(currentTasks.get(0));
+            currentTasks.remove(0);
 
             tmpServers.clear();
             for(Map.Entry<Integer,MiguServer> entry: miguServers.entrySet()) {
