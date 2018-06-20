@@ -219,4 +219,43 @@ public class ScheduleTest
         actual = schedule.scheduleTask(10);
         Assert.assertEquals(ReturnCodeKeys.E014, actual);
     }
+/*
+        @Test
+        public void testScheduleTask4()
+        {
+            int actual = schedule.init();
+            schedule.registerNode(7);
+            schedule.registerNode(1);
+            schedule.registerNode(6);
+
+            schedule.addTask(1, 4);
+            schedule.addTask(3, 3);
+            schedule.addTask(2, 14);
+            schedule.addTask(5, 6);
+            schedule.addTask(4, 16);
+            schedule.addTask(7, 7);
+            schedule.addTask(6, 4);
+
+            actual = schedule.scheduleTask(10);
+
+            Assert.assertEquals(ReturnCodeKeys.E013, actual);
+
+            List<TaskInfo> tasks = new ArrayList<TaskInfo>();
+
+            actual = schedule.queryTaskStatus(tasks);
+
+            Assert.assertEquals(ReturnCodeKeys.E015, actual);
+
+            int expecteds[][] = {
+                    {1, 1},
+                    {2, 6},
+                    {3, 7},
+                    {4, 7},
+                    {5, 1},
+                    {6, 6},
+                    {7, 1}};
+
+            assertPlanEqual(expecteds, tasks);
+        }
+        */
 }
